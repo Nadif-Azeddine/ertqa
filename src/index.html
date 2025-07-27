@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind CSS Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+    rel="stylesheet" />
+    <!-- Link to compiled Tailwind CSS -->
+    <link rel="stylesheet" href="../dist/output.css" />
+  </head>
+
+  <body dir="rtl" class="min-h-screen w-full bg-white">
+    <header
+      class="container max-h-[120px] py-5 w-full flex justify-center items-center">
+      <img
+        src="../assets/logo.svg"
+        alt="Logo"
+        class="object-contain w-auto"
+        height="45" />
+    </header>
+
+    <main>
+      <section class="bg-[#53BFAF] text-[#154C45]">
+        <div class="grid container py-16 sm:grid-cols-2 gap-8">
+          <div class="max-sm:text-center flex flex-col justify-center">
+            <h1 class="text-4xl font-bold mb-3">كل قطعة .. رؤية متكاملة</h1>
+            <p class="text-lg font-semibold max-w-lg">
+              نصنع الهدايا التي تعبّر عن هويتك، تحكي قصتك، وتحمل رسائلك. لا مجرد
+              هدايا، بل تجارب رمزية تُروى.
+            </p>
+            <img
+              src="../assets/images/pattern.svg"
+              class="object-contain scale-150 mt-24 max-sm:hidden"
+              height="320"
+              width="965"
+              loading="lazy"
+              alt="pattern" />
+          </div>
+          <img
+            src="../assets/images/hero_mg.png"
+            class="object-contain relative z-10 w-full h-auto"
+            alt="img" />
+        </div>
+      </section>
+
+      <section class="bg-[#158474] text-white">
+        <div class="grid container py-16 items-start sm:grid-cols-2 gap-8">
+          <div class="max-sm:text-center flex flex-col justify-center gap-y-9">
+            <h1 class="text-4xl font-black mb-3">
+              هل لديك مناسبة قريبة؟ دعنا نصمم لك الهدية التي تعبّر عنك
+            </h1>
+
+            <div class="space-y-3">
+              <div class="flex gap-4 items-center max-sm:flex-col">
+                <svg
+                  width="36"
+                  height="36"
+                  viewBox="0 0 36 36"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <rect
+                    x="0.5"
+                    y="0.5"
+                    width="35"
+                    height="35"
+                    rx="17.5"
+                    stroke="white" />
+                  <rect
+                    x="8"
+                    y="8"
+                    width="20"
+                    height="20"
+                    fill="url(#pattern0_40_233)" />
+                  <defs>
+                    <pattern
+                      id="pattern0_40_233"
+                      patternContentUnits="objectBoundingBox"
+                      width="1"
+                      height="1">
+                      <use
+                        xlink:href="#image0_40_233"
+                        transform="scale(0.0104167)" />
+                    </pattern>
+                    <image
+                      id="image0_40_233"
+                      width="96"
+                      height="96"
+                      preserveAspectRatio="none"
+                      xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAAAsTAAALEwEAmpwYAAAFcklEQVR4nO2d3YtWRRzHB2t3DSoyTSpwI9IKlKCLbqrL8GYpkzQr6cX6A7rwQrszVzGiugx6u/AueiXKCio2KChCIQq6akNoC1pRo1zQfNZPjDsbD0/neeY358zLeZkPPCDreX7znfnOzJkz55zfo1TmIsCVwMPAa8B3wDzwj/nMm7+9CjwEXLH0rUxlgJuBN4AF5OhjXwc2VFfQUYDLgBeA85RHj47ngZWp69MogA3Aj/jjG+C61PVqBMDtZk73za/Abanr14SePx+g8ftNuDZ1PWsJsBL4nvAc1eeX1PWtHSydcGPxbOr61nGpeT6iAX/nqagPs86Pzcv9Grp+hbvg2Hg/62kE2GY++4FZxxhngMtVkwDWAVd7jqm3F6RcMI09VhBnDJg2x0jZoeoOcAlwH/AR0DNXl58AT/oww+ztSNkviHfAId4rqq4Ak2aYz42oQGUzzCaadNoZE8Qbd5iOvlU17+0ulDIDOOF76WimKQl/qAb19lJmCMo+J4y5zaE+24Uxz6pUACuAe4C3Aq/Bxy06FgIY8KAw5hnVgt5u4xqLnuP4n4L0akjCcS+NGnhur8pGi7YZYZxZh5PwL8KYM14besi6PWZvL+IBi8ZDyJkW1PmgQ7xDXhu8T8R64N0Evb2IfRatU8i5YNb540N6/kHHC7GpUBtb0qWdjZ7gmI/NqmcYn1v0TgB/OuqaNfP8dvOZdph2ltFlToQw4G2qM2emrknbgabMVcAuY8bgsnLBdk8WOEx8DntvfFOZkyUFLQKfmR7138kOCwXlXwU8BnzYZ8a9Fs13EZ87QxlQprfrK8fJMvHUaC16ZDwBPC7Qre9UxeJolTa2VUTa248AW4BLq8RT/nTvIB7hdkEFhevefoOveMrvlfkPhEeXscKX7uANhud4lrL0iAzNFp+agzcYnuMJyvuUcHzhW2/wBsNzPEF5mwJtDuqYm3zrDd5geI4nLNNlO0HKgRBagzcYnuMJyxz3fEL+KdoDur4bDM/xHJ8RHbXF4TL13BFKZ2sN8DgVxZl6WmrABHCsQuMfC7Lh1hUDNMBNJXZLNX8Bt6jYNM0ABFelwFbHfX597FaVggYasFt43EsOBryoUtFAA85K3lwxjx5K7h/PSO4dB6OBBmDW/NaTJbDaPCE3DP1/q1VKsJA63iCuj4sDtwKnh5x0w281tNgAzSPC72weuEjT/96s6gAWUscbpODNlY3C7+00qx392Sn8Tvi3JBtuwPITD2uE393tsIpaG+VJOCykjjfIkLBf+byCNZt7X/rQ2xUDvD420v8SiK+YowobSep4g1jCP6MqAuz1qbdrBixWjP3o4BZGVb1dM4AKcaeK7idU1SspuPMGAHcPe/EjGxC+w+g7aadCjViJgE6PAEY0fjagBR2mdRWiYXqjCyAbkA1wIY+Alo/Y6ALIU1A2wIU8Alo+YqMLIE9B2QAX8gho+YiNLoA8BWUDXMgjoOUjNroA8hSUDXAhj4CWj9hoAnQ6A2TpH4+YhByrEuvV2cH2NdqAipkUe8DXwNO2RH0p9arQlBEAXA/scchg6GLG2jrp9dXOlSsUMW9ob5QZkfWeSG5Agryh/Zwzac12LZ8ziKv3zToYUIdMipin1rQZsfTqHwdaXwcDusYi8L5+3zh44wc2YM5MBU+ZxNw+8jiE5DeTzlKcHayOBiwWZVLsS8g3mB0xNUP1Ns2A34HngBuFZaY2w0lvUFL3HuKZkb63F1EisUWw3kMYM+rT24sA3vOZN9QX+mdNzM+blDmBR9db9QcxT9VqZVDejJFZfWuLyaD+jnnxWb/C/wFwfx17D/83o9eY3t42WDJjXWodmUwmk8lkMplMJpPJZDIqDf8CzOGpNPHT6wEAAAAASUVORK5CYII=" />
+                  </defs>
+                </svg>
+                <span class="text-xl font-semibold">حي الياسمين - الرياض</span>
+              </div>
+              <div class="flex gap-4 items-center max-sm:flex-col">
+                <svg
+                  width="36"
+                  height="36"
+                  viewBox="0 0 36 36"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <rect
+                    x="0.5"
+                    y="0.5"
+                    width="35"
+                    height="35"
+                    rx="17.5"
+                    stroke="white" />
+                  <rect
+                    x="8"
+                    y="8"
+                    width="20"
+                    height="20"
+                    fill="url(#pattern0_40_233)" />
+                  <defs>
+                    <pattern
+                      id="pattern0_40_233"
+                      patternContentUnits="objectBoundingBox"
+                      width="1"
+                      height="1">
+                      <use
+                        xlink:href="#image0_40_233"
+                        transform="scale(0.0104167)" />
+                    </pattern>
+                    <image
+                      id="image0_40_233"
+                      width="96"
+                      height="96"
+                      preserveAspectRatio="none"
+                      xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAAAsTAAALEwEAmpwYAAAFcklEQVR4nO2d3YtWRRzHB2t3DSoyTSpwI9IKlKCLbqrL8GYpkzQr6cX6A7rwQrszVzGiugx6u/AueiXKCio2KChCIQq6akNoC1pRo1zQfNZPjDsbD0/neeY358zLeZkPPCDreX7znfnOzJkz55zfo1TmIsCVwMPAa8B3wDzwj/nMm7+9CjwEXLH0rUxlgJuBN4AF5OhjXwc2VFfQUYDLgBeA85RHj47ngZWp69MogA3Aj/jjG+C61PVqBMDtZk73za/Abanr14SePx+g8ftNuDZ1PWsJsBL4nvAc1eeX1PWtHSydcGPxbOr61nGpeT6iAX/nqagPs86Pzcv9Grp+hbvg2Hg/62kE2GY++4FZxxhngMtVkwDWAVd7jqm3F6RcMI09VhBnDJg2x0jZoeoOcAlwH/AR0DNXl58AT/oww+ztSNkviHfAId4rqq4Ak2aYz42oQGUzzCaadNoZE8Qbd5iOvlU17+0ulDIDOOF76WimKQl/qAb19lJmCMo+J4y5zaE+24Uxz6pUACuAe4C3Aq/Bxy06FgIY8KAw5hnVgt5u4xqLnuP4n4L0akjCcS+NGnhur8pGi7YZYZxZh5PwL8KYM14besi6PWZvL+IBi8ZDyJkW1PmgQ7xDXhu8T8R64N0Evb2IfRatU8i5YNb540N6/kHHC7GpUBtb0qWdjZ7gmI/NqmcYn1v0TgB/OuqaNfP8dvOZdph2ltFlToQw4G2qM2emrknbgabMVcAuY8bgsnLBdk8WOEx8DntvfFOZkyUFLQKfmR7138kOCwXlXwU8BnzYZ8a9Fs13EZ87QxlQprfrK8fJMvHUaC16ZDwBPC7Qre9UxeJolTa2VUTa248AW4BLq8RT/nTvIB7hdkEFhevefoOveMrvlfkPhEeXscKX7uANhud4lrL0iAzNFp+agzcYnuMJyvuUcHzhW2/wBsNzPEF5mwJtDuqYm3zrDd5geI4nLNNlO0HKgRBagzcYnuMJyxz3fEL+KdoDur4bDM/xHJ8RHbXF4TL13BFKZ2sN8DgVxZl6WmrABHCsQuMfC7Lh1hUDNMBNJXZLNX8Bt6jYNM0ABFelwFbHfX597FaVggYasFt43EsOBryoUtFAA85K3lwxjx5K7h/PSO4dB6OBBmDW/NaTJbDaPCE3DP1/q1VKsJA63iCuj4sDtwKnh5x0w281tNgAzSPC72weuEjT/96s6gAWUscbpODNlY3C7+00qx392Sn8Tvi3JBtuwPITD2uE393tsIpaG+VJOCykjjfIkLBf+byCNZt7X/rQ2xUDvD420v8SiK+YowobSep4g1jCP6MqAuz1qbdrBixWjP3o4BZGVb1dM4AKcaeK7idU1SspuPMGAHcPe/EjGxC+w+g7aadCjViJgE6PAEY0fjagBR2mdRWiYXqjCyAbkA1wIY+Alo/Y6ALIU1A2wIU8Alo+YqMLIE9B2QAX8gho+YiNLoA8BWUDXMgjoOUjNroA8hSUDXAhj4CWj9hoAnQ6A2TpH4+YhByrEuvV2cH2NdqAipkUe8DXwNO2RH0p9arQlBEAXA/scchg6GLG2jrp9dXOlSsUMW9ob5QZkfWeSG5Agryh/Zwzac12LZ8ziKv3zToYUIdMipin1rQZsfTqHwdaXwcDusYi8L5+3zh44wc2YM5MBU+ZxNw+8jiE5DeTzlKcHayOBiwWZVLsS8g3mB0xNUP1Ns2A34HngBuFZaY2w0lvUFL3HuKZkb63F1EisUWw3kMYM+rT24sA3vOZN9QX+mdNzM+blDmBR9db9QcxT9VqZVDejJFZfWuLyaD+jnnxWb/C/wFwfx17D/83o9eY3t42WDJjXWodmUwmk8lkMplMJpPJZDIqDf8CzOGpNPHT6wEAAAAASUVORK5CYII=" />
+                  </defs>
+                </svg>
+                <span class="text-xl font-semibold">حي الياسمين - الرياض</span>
+              </div>
+              <div class="flex gap-4 items-center max-sm:flex-col">
+                <svg
+                  width="36"
+                  height="36"
+                  viewBox="0 0 36 36"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <rect
+                    x="0.5"
+                    y="0.5"
+                    width="35"
+                    height="35"
+                    rx="17.5"
+                    stroke="white" />
+                  <rect
+                    x="8"
+                    y="8"
+                    width="20"
+                    height="20"
+                    fill="url(#pattern0_40_233)" />
+                  <defs>
+                    <pattern
+                      id="pattern0_40_233"
+                      patternContentUnits="objectBoundingBox"
+                      width="1"
+                      height="1">
+                      <use
+                        xlink:href="#image0_40_233"
+                        transform="scale(0.0104167)" />
+                    </pattern>
+                    <image
+                      id="image0_40_233"
+                      width="96"
+                      height="96"
+                      preserveAspectRatio="none"
+                      xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAAAsTAAALEwEAmpwYAAAFcklEQVR4nO2d3YtWRRzHB2t3DSoyTSpwI9IKlKCLbqrL8GYpkzQr6cX6A7rwQrszVzGiugx6u/AueiXKCio2KChCIQq6akNoC1pRo1zQfNZPjDsbD0/neeY358zLeZkPPCDreX7znfnOzJkz55zfo1TmIsCVwMPAa8B3wDzwj/nMm7+9CjwEXLH0rUxlgJuBN4AF5OhjXwc2VFfQUYDLgBeA85RHj47ngZWp69MogA3Aj/jjG+C61PVqBMDtZk73za/Abanr14SePx+g8ftNuDZ1PWsJsBL4nvAc1eeX1PWtHSydcGPxbOr61nGpeT6iAX/nqagPs86Pzcv9Grp+hbvg2Hg/62kE2GY++4FZxxhngMtVkwDWAVd7jqm3F6RcMI09VhBnDJg2x0jZoeoOcAlwH/AR0DNXl58AT/oww+ztSNkviHfAId4rqq4Ak2aYz42oQGUzzCaadNoZE8Qbd5iOvlU17+0ulDIDOOF76WimKQl/qAb19lJmCMo+J4y5zaE+24Uxz6pUACuAe4C3Aq/Bxy06FgIY8KAw5hnVgt5u4xqLnuP4n4L0akjCcS+NGnhur8pGi7YZYZxZh5PwL8KYM14besi6PWZvL+IBi8ZDyJkW1PmgQ7xDXhu8T8R64N0Evb2IfRatU8i5YNb540N6/kHHC7GpUBtb0qWdjZ7gmI/NqmcYn1v0TgB/OuqaNfP8dvOZdph2ltFlToQw4G2qM2emrknbgabMVcAuY8bgsnLBdk8WOEx8DntvfFOZkyUFLQKfmR7138kOCwXlXwU8BnzYZ8a9Fs13EZ87QxlQprfrK8fJMvHUaC16ZDwBPC7Qre9UxeJolTa2VUTa248AW4BLq8RT/nTvIB7hdkEFhevefoOveMrvlfkPhEeXscKX7uANhud4lrL0iAzNFp+agzcYnuMJyvuUcHzhW2/wBsNzPEF5mwJtDuqYm3zrDd5geI4nLNNlO0HKgRBagzcYnuMJyxz3fEL+KdoDur4bDM/xHJ8RHbXF4TL13BFKZ2sN8DgVxZl6WmrABHCsQuMfC7Lh1hUDNMBNJXZLNX8Bt6jYNM0ABFelwFbHfX597FaVggYasFt43EsOBryoUtFAA85K3lwxjx5K7h/PSO4dB6OBBmDW/NaTJbDaPCE3DP1/q1VKsJA63iCuj4sDtwKnh5x0w281tNgAzSPC72weuEjT/96s6gAWUscbpODNlY3C7+00qx392Sn8Tvi3JBtuwPITD2uE393tsIpaG+VJOCykjjfIkLBf+byCNZt7X/rQ2xUDvD420v8SiK+YowobSep4g1jCP6MqAuz1qbdrBixWjP3o4BZGVb1dM4AKcaeK7idU1SspuPMGAHcPe/EjGxC+w+g7aadCjViJgE6PAEY0fjagBR2mdRWiYXqjCyAbkA1wIY+Alo/Y6ALIU1A2wIU8Alo+YqMLIE9B2QAX8gho+YiNLoA8BWUDXMgjoOUjNroA8hSUDXAhj4CWj9hoAnQ6A2TpH4+YhByrEuvV2cH2NdqAipkUe8DXwNO2RH0p9arQlBEAXA/scchg6GLG2jrp9dXOlSsUMW9ob5QZkfWeSG5Agryh/Zwzac12LZ8ziKv3zToYUIdMipin1rQZsfTqHwdaXwcDusYi8L5+3zh44wc2YM5MBU+ZxNw+8jiE5DeTzlKcHayOBiwWZVLsS8g3mB0xNUP1Ns2A34HngBuFZaY2w0lvUFL3HuKZkb63F1EisUWw3kMYM+rT24sA3vOZN9QX+mdNzM+blDmBR9db9QcxT9VqZVDejJFZfWuLyaD+jnnxWb/C/wFwfx17D/83o9eY3t42WDJjXWodmUwmk8lkMplMJpPJZDIqDf8CzOGpNPHT6wEAAAAASUVORK5CYII=" />
+                  </defs>
+                </svg>
+                <span class="text-xl font-semibold">حي الياسمين - الرياض</span>
+              </div>
+              <div class="flex gap-4 items-center max-sm:flex-col">
+                <svg
+                  width="36"
+                  height="36"
+                  viewBox="0 0 36 36"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <rect
+                    x="0.5"
+                    y="0.5"
+                    width="35"
+                    height="35"
+                    rx="17.5"
+                    stroke="white" />
+                  <rect
+                    x="8"
+                    y="8"
+                    width="20"
+                    height="20"
+                    fill="url(#pattern0_40_233)" />
+                  <defs>
+                    <pattern
+                      id="pattern0_40_233"
+                      patternContentUnits="objectBoundingBox"
+                      width="1"
+                      height="1">
+                      <use
+                        xlink:href="#image0_40_233"
+                        transform="scale(0.0104167)" />
+                    </pattern>
+                    <image
+                      id="image0_40_233"
+                      width="96"
+                      height="96"
+                      preserveAspectRatio="none"
+                      xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAAAsTAAALEwEAmpwYAAAFcklEQVR4nO2d3YtWRRzHB2t3DSoyTSpwI9IKlKCLbqrL8GYpkzQr6cX6A7rwQrszVzGiugx6u/AueiXKCio2KChCIQq6akNoC1pRo1zQfNZPjDsbD0/neeY358zLeZkPPCDreX7znfnOzJkz55zfo1TmIsCVwMPAa8B3wDzwj/nMm7+9CjwEXLH0rUxlgJuBN4AF5OhjXwc2VFfQUYDLgBeA85RHj47ngZWp69MogA3Aj/jjG+C61PVqBMDtZk73za/Abanr14SePx+g8ftNuDZ1PWsJsBL4nvAc1eeX1PWtHSydcGPxbOr61nGpeT6iAX/nqagPs86Pzcv9Grp+hbvg2Hg/62kE2GY++4FZxxhngMtVkwDWAVd7jqm3F6RcMI09VhBnDJg2x0jZoeoOcAlwH/AR0DNXl58AT/oww+ztSNkviHfAId4rqq4Ak2aYz42oQGUzzCaadNoZE8Qbd5iOvlU17+0ulDIDOOF76WimKQl/qAb19lJmCMo+J4y5zaE+24Uxz6pUACuAe4C3Aq/Bxy06FgIY8KAw5hnVgt5u4xqLnuP4n4L0akjCcS+NGnhur8pGi7YZYZxZh5PwL8KYM14besi6PWZvL+IBi8ZDyJkW1PmgQ7xDXhu8T8R64N0Evb2IfRatU8i5YNb540N6/kHHC7GpUBtb0qWdjZ7gmI/NqmcYn1v0TgB/OuqaNfP8dvOZdph2ltFlToQw4G2qM2emrknbgabMVcAuY8bgsnLBdk8WOEx8DntvfFOZkyUFLQKfmR7138kOCwXlXwU8BnzYZ8a9Fs13EZ87QxlQprfrK8fJMvHUaC16ZDwBPC7Qre9UxeJolTa2VUTa248AW4BLq8RT/nTvIB7hdkEFhevefoOveMrvlfkPhEeXscKX7uANhud4lrL0iAzNFp+agzcYnuMJyvuUcHzhW2/wBsNzPEF5mwJtDuqYm3zrDd5geI4nLNNlO0HKgRBagzcYnuMJyxz3fEL+KdoDur4bDM/xHJ8RHbXF4TL13BFKZ2sN8DgVxZl6WmrABHCsQuMfC7Lh1hUDNMBNJXZLNX8Bt6jYNM0ABFelwFbHfX597FaVggYasFt43EsOBryoUtFAA85K3lwxjx5K7h/PSO4dB6OBBmDW/NaTJbDaPCE3DP1/q1VKsJA63iCuj4sDtwKnh5x0w281tNgAzSPC72weuEjT/96s6gAWUscbpODNlY3C7+00qx392Sn8Tvi3JBtuwPITD2uE393tsIpaG+VJOCykjjfIkLBf+byCNZt7X/rQ2xUDvD420v8SiK+YowobSep4g1jCP6MqAuz1qbdrBixWjP3o4BZGVb1dM4AKcaeK7idU1SspuPMGAHcPe/EjGxC+w+g7aadCjViJgE6PAEY0fjagBR2mdRWiYXqjCyAbkA1wIY+Alo/Y6ALIU1A2wIU8Alo+YqMLIE9B2QAX8gho+YiNLoA8BWUDXMgjoOUjNroA8hSUDXAhj4CWj9hoAnQ6A2TpH4+YhByrEuvV2cH2NdqAipkUe8DXwNO2RH0p9arQlBEAXA/scchg6GLG2jrp9dXOlSsUMW9ob5QZkfWeSG5Agryh/Zwzac12LZ8ziKv3zToYUIdMipin1rQZsfTqHwdaXwcDusYi8L5+3zh44wc2YM5MBU+ZxNw+8jiE5DeTzlKcHayOBiwWZVLsS8g3mB0xNUP1Ns2A34HngBuFZaY2w0lvUFL3HuKZkb63F1EisUWw3kMYM+rT24sA3vOZN9QX+mdNzM+blDmBR9db9QcxT9VqZVDejJFZfWuLyaD+jnnxWb/C/wFwfx17D/83o9eY3t42WDJjXWodmUwmk8lkMplMJpPJZDIqDf8CzOGpNPHT6wEAAAAASUVORK5CYII=" />
+                  </defs>
+                </svg>
+                <span class="text-xl font-semibold">حي الياسمين - الرياض</span>
+              </div>
+            </div>
+            <div class="h-0.5 w-[78px] max-sm:hidden my-6 bg-white"></div>
+
+            <div class="flex items-center max-sm:flex-col gap-2">
+              <button
+                class="btn bg-[#C97567] hover:bg-[#C97567]/90 max-sm:w-full transition-all text-white">
+                <span>حمّل كتالوج الهدايا الآن</span>
+              </button>
+              <button
+                class="btn bg-[#C97567] hover:bg-[#C97567]/90 max-sm:w-full transition-all text-white">
+                <span>احصل على استشارة مجانية</span>
+              </button>
+            </div>
+
+            <div class="h-0.5 w-full sm:hidden my-6 bg-white"></div>
+          </div>
+          <form action="" class="w-full relative">
+            <h3 class="text-3xl font-black sm:hidden text-center mb-8">احصل على استشارة مجانية</h3>
+            <div class="w-full grid grid-cols-2 gap-2 relative z-10">
+              <div class="max-md:col-span-2">
+                <input type="text" placeholder="الإسم" class="w-full input" />
+              </div>
+              <div class="max-md:col-span-2">
+                <input
+                  type="text"
+                  placeholder="رقم الهاتف"
+                  class="w-full input" />
+              </div>
+              <div class="col-span-2">
+                <input type="text" placeholder="الإيميل" class="w-full input" />
+              </div>
+              <div class="col-span-2">
+                <textarea
+                  type="text"
+                  rows="8"
+                  placeholder="الرسالة"
+                  class="w-full input"></textarea>
+              </div>
+              <button class="btn col-span-2 bg-white text-[#158474]">
+                إرســــــــــــــال
+              </button>
+            </div>
+
+            <img
+              src="../assets/images/form_pattern.svg"
+              class="object-contain absolute max-sm:hidden bottom-0 -end-20"
+              loading="lazy"
+              alt="pattern" />
+          </form>
+        </div>
+      </section>
+
+      <section
+        class="container py-20 flex max-sm:flex-col gap-10 items-center justify-between">
+        <img
+          src="../assets/images/pattern_2.svg"
+          class="object-contain"
+          width="200"
+          height="200"
+          alt="pattern 2" />
+
+        <div class="flex items-center max-sm:flex-col gap-10 justify-between">
+          <div class="flex flex-col text-center gap-3">
+            <span class="text-5xl font-semibold">
+              100 <span class="text-[#158474]">%</span>
+            </span>
+            <span class="text-[#80786F] font-medium">مصنع سعودي</span>
+          </div>
+          <div class="h-[53px] w-[1px] bg-[#D1D5DB] max-sm:h-[1px] max-sm:w-full"></div>
+          <div class="flex flex-col text-center gap-3">
+            <span class="text-5xl font-semibold">
+              +25 <span class="text-[#158474]">ألف</span>
+            </span>
+            <span class="text-[#80786F] font-medium">مصنع سعودي</span>
+          </div>
+          <div class="h-[53px] w-[1px] bg-[#D1D5DB] max-sm:h-[1px] max-sm:w-full"></div>
+          <div class="flex flex-col text-center gap-3">
+            <span class="text-5xl font-semibold">
+              ١٢ <span class="text-[#158474]">سنة</span>
+            </span>
+            <span class="text-[#80786F] font-medium">مصنع سعودي</span>
+          </div>
+        </div>
+
+        <img
+          src="../assets/images/pattern_2.svg"
+          class="object-contain"
+          width="200"
+          height="200"
+          alt="pattern 2" />
+      </section>
+
+      <section class="bg-[#FBF8F4] py-20">
+        <div class="container flex flex-col justify-center items-center gap-10">
+          <div class="flex flex-col gap-7 justify-center text-center items-center">
+            <img
+              src="../assets//images/pattern_3.svg"
+              alt="pattern 3"
+              class="object-contain" />
+            <h3 class="text-3xl font-black">من الفكرة إلى التجربة</h3>
+          </div>
+
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 gap-y-10 pt-12">
+            <div
+              class="flex flex-col justify-center items-center text-center gap-2 max-sm:gap-8">
+              <img
+                src="../assets/images/number_1.svg"
+                class="object-contain"
+                width="140"
+                height="140"
+                alt="number 1" />
+              <div class="h-20 w-0.5 bg-[#24544E] max-sm:hidden"></div>
+              <div class="space-y-2">
+                <h4 class="text-2xl font-semibold">نفهمك أولًا</h4>
+                <p class="text-[#868686] font-medium">
+                  جلسة استكشافية لفهم هويتك، المناسبة، والرسالة التي تود
+                  إيصالها.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="flex flex-col justify-center items-center max-sm:flex-col-reverse text-center gap-2 max-sm:gap-8">
+              <div class="space-y-2">
+                <h4 class="text-2xl font-semibold">نفهمك أولًا</h4>
+                <p class="text-[#868686] font-medium">
+                  جلسة استكشافية لفهم هويتك، المناسبة، والرسالة التي تود
+                  إيصالها.
+                </p>
+              </div>
+              <div class="h-20 w-0.5 bg-[#24544E] max-sm:hidden"></div>
+              <img
+                src="../assets/images/number_2.svg"
+                class="object-contain"
+                width="140"
+                height="140"
+                alt="number 1" />
+            </div>
+
+            <div
+              class="flex flex-col justify-center items-center text-center gap-2 max-sm:gap-8">
+              <img
+                src="../assets/images/number_1.svg"
+                class="object-contain"
+                width="140"
+                height="140"
+                alt="number 1" />
+              <div class="h-20 w-0.5 bg-[#24544E] max-sm:hidden"></div>
+              <div class="space-y-2">
+                <h4 class="text-2xl font-semibold">نفهمك أولًا</h4>
+                <p class="text-[#868686] font-medium">
+                  جلسة استكشافية لفهم هويتك، المناسبة، والرسالة التي تود
+                  إيصالها.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="flex flex-col justify-center items-center max-sm:flex-col-reverse text-center gap-2 max-sm:gap-8">
+              <div class="space-y-2">
+                <h4 class="text-2xl font-semibold">نفهمك أولًا</h4>
+                <p class="text-[#868686] font-medium">
+                  جلسة استكشافية لفهم هويتك، المناسبة، والرسالة التي تود
+                  إيصالها.
+                </p>
+              </div>
+              <div class="h-20 w-0.5 bg-[#24544E] max-sm:hidden"></div>
+              <img
+                src="../assets/images/number_2.svg"
+                class="object-contain"
+                width="140"
+                height="140"
+                alt="number 1" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-20">
+        <div class="container flex flex-col justify-center items-center gap-10">
+          <div class="flex flex-col gap-7 justify-center items-center">
+            <img
+              src="../assets//images/pattern_3.svg"
+              alt="pattern 3"
+              class="object-contain" />
+            <h3 class="text-4xl font-black">آراء العملاء</h3>
+          </div>
+
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="rounded-xl p-9 bg-[#FBF8F4] space-y-4">
+              <span class="font-semibold text-xl">سلمان العتيبي</span>
+              <p class="text-neutral-500 font-medium">
+                خدمة رائعة وتعامل راقي شغلهم احترافي وسريع وخلصوا طلبي في وقت
+                قياسي. شكراً لهم
+              </p>
+            </div>
+            <div class="rounded-xl p-9 bg-[#FBF8F4] space-y-4">
+              <span class="font-semibold text-xl">سلمان العتيبي</span>
+              <p class="text-neutral-500 font-medium">
+                خدمة رائعة وتعامل راقي شغلهم احترافي وسريع وخلصوا طلبي في وقت
+                قياسي. شكراً لهم
+              </p>
+            </div>
+            <div class="rounded-xl p-9 bg-[#FBF8F4] space-y-4">
+              <span class="font-semibold text-xl">سلمان العتيبي</span>
+              <p class="text-neutral-500 font-medium">
+                خدمة رائعة وتعامل راقي شغلهم احترافي وسريع وخلصوا طلبي في وقت
+                قياسي. شكراً لهم
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="p-4 bg-[#24544E] flex items-center">
+      <div
+        class="container flex w-full justify-between text-white items-center max-sm:flex-col-reverse max-sm:gap-5">
+        <p class="text-sm font-medium">© كافة الحقوق محفوظة</p>
+
+        <div class="flex items-center gap-3">
+          <a href="#">
+            <svg
+              width="32"
+              height="33"
+              viewBox="0 0 32 33"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <rect
+                x="0.75"
+                y="1.46973"
+                width="30.5"
+                height="30.5"
+                rx="15.25"
+                stroke="white"
+                stroke-width="1.5" />
+              <path
+                d="M15.4326 8.71973C8.53974 8.71973 8 9.25947 8 16.1523V16.2871C8 23.18 8.53974 23.7197 15.4326 23.7197H15.5674C22.4603 23.7197 23 23.18 23 16.2871V16.2197C23 9.26423 22.4555 8.71973 15.5 8.71973H15.4326ZM14 10.2197H17C21.1734 10.2197 21.5 10.5464 21.5 14.7197V17.7197C21.5 21.8931 21.1734 22.2197 17 22.2197H14C9.82663 22.2197 9.5 21.8931 9.5 17.7197V14.7197C9.5 10.5464 9.82663 10.2197 14 10.2197ZM19.2478 11.7197C18.8334 11.7209 18.4989 12.0575 18.5 12.4719C18.5011 12.8863 18.8378 13.2209 19.2522 13.2197C19.6666 13.2186 20.0011 12.8819 20 12.4675C19.9989 12.0532 19.6622 11.7186 19.2478 11.7197ZM15.4912 12.4697C13.4205 12.4746 11.7451 14.1578 11.75 16.2285C11.7549 18.2993 13.438 19.9746 15.5088 19.9697C17.5795 19.9649 19.2549 18.2817 19.25 16.2109C19.2451 14.1402 17.562 12.4649 15.4912 12.4697ZM15.4949 13.9697C16.7372 13.9667 17.747 14.9722 17.75 16.2146C17.7526 17.457 16.7475 18.4667 15.5051 18.4697C14.2628 18.4727 13.253 17.4676 13.25 16.2249C13.247 14.9825 14.2525 13.9727 15.4949 13.9697Z"
+                fill="white" />
+            </svg>
+          </a>
+          <a href="#">
+            <svg
+              width="32"
+              height="33"
+              viewBox="0 0 32 33"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <rect
+                x="0.75"
+                y="1.46973"
+                width="30.5"
+                height="30.5"
+                rx="15.25"
+                stroke="white"
+                stroke-width="1.5" />
+              <path
+                d="M15.4326 8.71973C8.53974 8.71973 8 9.25947 8 16.1523V16.2871C8 23.18 8.53974 23.7197 15.4326 23.7197H15.5674C22.4603 23.7197 23 23.18 23 16.2871V16.2197C23 9.26423 22.4555 8.71973 15.5 8.71973H15.4326ZM14 10.2197H17C21.1734 10.2197 21.5 10.5464 21.5 14.7197V17.7197C21.5 21.8931 21.1734 22.2197 17 22.2197H14C9.82663 22.2197 9.5 21.8931 9.5 17.7197V14.7197C9.5 10.5464 9.82663 10.2197 14 10.2197ZM19.2478 11.7197C18.8334 11.7209 18.4989 12.0575 18.5 12.4719C18.5011 12.8863 18.8378 13.2209 19.2522 13.2197C19.6666 13.2186 20.0011 12.8819 20 12.4675C19.9989 12.0532 19.6622 11.7186 19.2478 11.7197ZM15.4912 12.4697C13.4205 12.4746 11.7451 14.1578 11.75 16.2285C11.7549 18.2993 13.438 19.9746 15.5088 19.9697C17.5795 19.9649 19.2549 18.2817 19.25 16.2109C19.2451 14.1402 17.562 12.4649 15.4912 12.4697ZM15.4949 13.9697C16.7372 13.9667 17.747 14.9722 17.75 16.2146C17.7526 17.457 16.7475 18.4667 15.5051 18.4697C14.2628 18.4727 13.253 17.4676 13.25 16.2249C13.247 14.9825 14.2525 13.9727 15.4949 13.9697Z"
+                fill="white" />
+            </svg>
+          </a>
+          <a href="#">
+            <svg
+              width="32"
+              height="33"
+              viewBox="0 0 32 33"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <rect
+                x="0.75"
+                y="1.46973"
+                width="30.5"
+                height="30.5"
+                rx="15.25"
+                stroke="white"
+                stroke-width="1.5" />
+              <path
+                d="M15.4326 8.71973C8.53974 8.71973 8 9.25947 8 16.1523V16.2871C8 23.18 8.53974 23.7197 15.4326 23.7197H15.5674C22.4603 23.7197 23 23.18 23 16.2871V16.2197C23 9.26423 22.4555 8.71973 15.5 8.71973H15.4326ZM14 10.2197H17C21.1734 10.2197 21.5 10.5464 21.5 14.7197V17.7197C21.5 21.8931 21.1734 22.2197 17 22.2197H14C9.82663 22.2197 9.5 21.8931 9.5 17.7197V14.7197C9.5 10.5464 9.82663 10.2197 14 10.2197ZM19.2478 11.7197C18.8334 11.7209 18.4989 12.0575 18.5 12.4719C18.5011 12.8863 18.8378 13.2209 19.2522 13.2197C19.6666 13.2186 20.0011 12.8819 20 12.4675C19.9989 12.0532 19.6622 11.7186 19.2478 11.7197ZM15.4912 12.4697C13.4205 12.4746 11.7451 14.1578 11.75 16.2285C11.7549 18.2993 13.438 19.9746 15.5088 19.9697C17.5795 19.9649 19.2549 18.2817 19.25 16.2109C19.2451 14.1402 17.562 12.4649 15.4912 12.4697ZM15.4949 13.9697C16.7372 13.9667 17.747 14.9722 17.75 16.2146C17.7526 17.457 16.7475 18.4667 15.5051 18.4697C14.2628 18.4727 13.253 17.4676 13.25 16.2249C13.247 14.9825 14.2525 13.9727 15.4949 13.9697Z"
+                fill="white" />
+            </svg>
+          </a>
+          <a href="#">
+            <svg
+              width="32"
+              height="33"
+              viewBox="0 0 32 33"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <rect
+                x="0.75"
+                y="1.46973"
+                width="30.5"
+                height="30.5"
+                rx="15.25"
+                stroke="white"
+                stroke-width="1.5" />
+              <path
+                d="M15.4326 8.71973C8.53974 8.71973 8 9.25947 8 16.1523V16.2871C8 23.18 8.53974 23.7197 15.4326 23.7197H15.5674C22.4603 23.7197 23 23.18 23 16.2871V16.2197C23 9.26423 22.4555 8.71973 15.5 8.71973H15.4326ZM14 10.2197H17C21.1734 10.2197 21.5 10.5464 21.5 14.7197V17.7197C21.5 21.8931 21.1734 22.2197 17 22.2197H14C9.82663 22.2197 9.5 21.8931 9.5 17.7197V14.7197C9.5 10.5464 9.82663 10.2197 14 10.2197ZM19.2478 11.7197C18.8334 11.7209 18.4989 12.0575 18.5 12.4719C18.5011 12.8863 18.8378 13.2209 19.2522 13.2197C19.6666 13.2186 20.0011 12.8819 20 12.4675C19.9989 12.0532 19.6622 11.7186 19.2478 11.7197ZM15.4912 12.4697C13.4205 12.4746 11.7451 14.1578 11.75 16.2285C11.7549 18.2993 13.438 19.9746 15.5088 19.9697C17.5795 19.9649 19.2549 18.2817 19.25 16.2109C19.2451 14.1402 17.562 12.4649 15.4912 12.4697ZM15.4949 13.9697C16.7372 13.9667 17.747 14.9722 17.75 16.2146C17.7526 17.457 16.7475 18.4667 15.5051 18.4697C14.2628 18.4727 13.253 17.4676 13.25 16.2249C13.247 14.9825 14.2525 13.9727 15.4949 13.9697Z"
+                fill="white" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Link to your JavaScript file -->
+    <script src="./script.js"></script>
+  </body>
+</html>
